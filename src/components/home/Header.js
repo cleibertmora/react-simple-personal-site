@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 
 function Header({ navbar }) {
-  const [headerContent, setHeaderContent] = useState(null);
+  const [headerContent, setHeaderContent] = useState({});
 
   useEffect(() => {
     setHeaderContent({
@@ -13,7 +13,9 @@ function Header({ navbar }) {
   }, [])
 
   const classesHeader = [
-    "bg-blue-200"
+    "bg-blue-200",
+    "px-4",
+    "lg:px-8"
   ]
 
   const classesInnerHeader = [
@@ -22,6 +24,8 @@ function Header({ navbar }) {
 
   const classesCallToAction = [
     "w-full",
+    "p-4",
+    "bg-orange-200",
     "text-center",
     "lg:text-left",
     "lg:w-1/3"
@@ -29,6 +33,7 @@ function Header({ navbar }) {
 
   const classesMainPhoto = [
     "hidden",
+    "bg-yellow-200",
     "lg:block",
     "lg:w-2/3"
   ]
